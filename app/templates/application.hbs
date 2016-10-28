@@ -3,10 +3,6 @@ lng: {{lng}}<br>
 zoom: {{zoom}}<br>
 
 
-{{#leaflet-map class="leaflet-container" lat=lat lng=lng zoom=zoom}}
-  {{tile-layer url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
-{{/leaflet-map}}
-
 {{#leaflet-map id="leaflet-container" lat=lat lng=lng zoom=zoom}}
 
   {{tile-layer url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
