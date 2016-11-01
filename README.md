@@ -1,3 +1,13 @@
+npm install ember-leaflet
+  Had to tweek app.css for maps to show up.
+npm install ember-paper
+
+
+
+
+
+
+
 # Leaflet
 
 This README outlines the details of collaborating on this Ember application.

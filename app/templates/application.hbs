@@ -1,24 +1,11 @@
-lat: {{lat}}<br>
-lng: {{lng}}<br>
-zoom: {{zoom}}<br>
-
-
-{{#leaflet-map id="leaflet-container" lat=lat lng=lng zoom=zoom}}
-
-  {{tile-layer url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
-
-  {{#marker-layer location=emberConfLocation}}
-    {{#popup-layer}}
-      <h3>The Oregon Convention Center</h3>
-      777 NE Martin Luther King Jr Blvd<br>
-      Portland, OR 97232
-    {{/popup-layer}}
-  {{/marker-layer}}
-
-  {{#marker-layer location=hotel}}
-    {{#popup-layer}}
-      <h3>Hotel</h3>
-    {{/popup-layer}}
-  {{/marker-layer}}
-
-{{/leaflet-map}}
+<br>
+<br>
+<div class="md-padding">
+{{#link-to "leaflet-container"}}leaflet-container{{/link-to}}<br>
+{{#link-to "adding-layers"}}adding-layers{{/link-to}}<br>
+{{#link-to "actions-interactions"}}actions-interactions{{/link-to}}<br>
+{{#link-to "contextual-components"}}contextual-components{{/link-to}}
+</div>
+<br>
+<br>
+{{outlet}}

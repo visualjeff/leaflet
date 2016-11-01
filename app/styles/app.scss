@@ -1,0 +1,8 @@
+@import 'ember-paper';
+
+/* added by Jeffg.  Otherwise your leaflet container wont show up  */
+.leaflet-container {
+    height: 450px;
+    width: 1140px;
+    border: 1px solid gray;
+}

@@ -1,0 +1,11 @@
+  
+    {{#paper-card as |card|}}
+		{{#leaflet-map id="leaflet-container" lat=lat lng=lng zoom=zoom}}
+  			{{!-- Specify child layer components here --}}
+		{{/leaflet-map}}
+	{{/paper-card}}
+
+
+<br>
+<br>
+{{#link-to "index"}}Home{{/link-to}}

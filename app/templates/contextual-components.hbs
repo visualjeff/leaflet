@@ -1,0 +1,44 @@
+<div class="md-padding">
+<p><label>{{input type="checkbox" checked=nightMode}} Night mode</label></p>
+
+{{#leaflet-map id="leaflet-container" lat=lat lng=lng zoom=zoom as |layers|}}
+
+  {{#if nightMode}}
+    {{layers.tile url="http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png"}}
+  {{else}}
+    {{layers.tile url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
+  {{/if}}
+
+  {{#each restaurants as |r|}}
+    {{#layers.marker lat=r.lat lng=r.lng draggable=true onDragend=(action "updateLocation" r) as |marker|}}
+      {{#marker.popup}}
+        {{input value=r.name}}<br>
+        Owner: {{r.owner}}<br>
+        Rating: {{r.rating}}/5
+      {{/marker.popup}}
+    {{/layers.marker}}
+  {{/each}}
+
+  {{#layers.polygon locations=dangerZone color="red" as |polygon|}}
+    {{#polygon.tooltip}}
+    DANGER ZONE
+    {{/polygon.tooltip}}
+  {{/layers.polygon}}
+
+{{/leaflet-map}}
+
+<h3>Portland Restaurants</h3>
+<ul>
+  {{#each restaurants as |r|}}
+    <li>
+      <strong>{{r.name}}</strong><br>
+      Lat: {{input value=r.lat}}
+      Lng: {{input value=r.lng}}
+    </li>
+  {{/each}}
+</ul>
+</div>
+
+<br>
+<br>
+{{#link-to "index"}}Home{{/link-to}}

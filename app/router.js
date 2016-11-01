@@ -7,6 +7,10 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('leaflet-container');
+  this.route('adding-layers');
+  this.route('actions-interactions');
+  this.route('contextual-components');
 });
 
 export default Router;
