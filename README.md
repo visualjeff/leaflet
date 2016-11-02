@@ -1,6 +1,16 @@
 npm install ember-leaflet
-  Had to tweek app.css for maps to show up.
+  Had to tweek styles/app.css for maps to show up.
 npm install ember-paper
+  Moved tweeked app.css changes to styles/app.scss
+ember install ember-transition-helper
+
+Setup paper-toolbar
+
+Added more tweeks to styles/app.scss for paper-right positioning:
+
+.paper-right {
+  margin-left: auto;
+}
 
 
 
